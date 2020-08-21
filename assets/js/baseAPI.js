@@ -15,7 +15,7 @@ $.ajaxPrefilter(function (res) {
     }
     // 拦截所有相应 判断身份认证信息
     res.complete = function (eve) {
-        console.log(eve.responseJSON);
+        // console.log(eve.responseJSON);
         var obj = eve.responseJSON
         if (obj.status == 1 && obj.message == '身份认证失败！') {
             localStorage.removeItem('token')
